@@ -1,3 +1,31 @@
-<p>
-  project-list works!
-</p>
+<div *ngIf="!user">
+  <div class="message">
+    This page is restricted. Please log in to continue.
+  </div>
+</div>
+<div class="main" *ngIf="user">
+  <ul class="cards" >
+    <li class="cards_item" *ngFor="let project of projects | async">
+      <div class="card">
+
+
+        <img   src="https://drive.google.com/uc?export=view&id={{project.image}}">
+
+
+        <div class="card_content">
+          <h2 class="infos" routerLink='{{project.id}}'>
+          Full name : {{project.title}} <br>
+           Status :  {{project.content}}<br>
+            Subscribed until : {{project.published}} <br>
+
+          </h2>
+
+          <button routerLink='{{project.id}}' class="btn read card_btn">More details</button>
+          <span *ngIf="user"   (click)="deleteProject(project.id)"><i  id="trash" class="fas fa-trash"></i></span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+

@@ -1,3 +1,57 @@
-<p>
-  admin works!
-</p>
+<div >
+<div  *ngIf="!user" id="wrapper">
+
+  <div class="form-layout">
+    <div class="form-left">
+      <div class="footer">
+
+      </div>
+    </div>
+
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" class="form-right">
+      <div id="error" *ngIf="authError">please verify your informations</div>
+      <div>
+        <input   type="email" ngModel #email="ngModel"  name="email" id="email" placeholder="Email" autocomplete="off" />
+      </div>
+      <div>
+        <input type="password" ngModel #password="ngModel"  name="password" id="password" placeholder="Password" autocomplete="off" />
+      </div>
+
+
+      <button class="btn btn-default btn-lg text" type="submit">Log in </button>
+
+    </form>
+  </div>
+</div>
+<div *ngIf="user  "  class="conatiner">
+  <div class="text1">
+  <button class="btn btn-default btn-lg text " *ngIf="user" (click)="logout()">Log out </button>
+  <strong id="sokh"> Hello, How are you today ? :) </strong>
+  </div>
+
+  <app-posting></app-posting>
+
+
+  <div class="tabs">
+    <div class="tab-2">
+      <label for="tab2-1"> <font>Add a school</font> </label>
+      <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
+      <div>
+        <app-post-dashboard></app-post-dashboard>
+      </div>
+    </div>
+    <div class="tab-2">
+      <label for="tab2-2"><strong>Add a member </strong> </label>
+      <input id="tab2-2" name="tabs-two" type="radio">
+      <div>
+        <app-project-dashboard></app-project-dashboard>
+      </div>
+    </div>
+  </div>
+  <!--
+<app-post-dashboard></app-post-dashboard>
+  <div style="padding: 2%"></div>
+  <app-project-dashboard></app-project-dashboard>
+!-->
+</div>
+</div>

@@ -1,3 +1,30 @@
-<p>
-  post-list works!
-</p>
+<div class="text">Schools</div>
+<div *ngIf="!user">
+<div class="message">
+  This page is restricted. Please log in to continue.
+</div>
+</div>
+<div *ngIf="user" class="main">
+  <ul class="cards" >
+    <li class="cards_item" *ngFor="let post of posts | async " >
+      <div class="card">
+
+
+          <img   src="https://drive.google.com/uc?export=view&id={{post.image}}">
+
+
+        <div class="card_content">
+          <h2 routerLink='{{post.id}}'>
+            {{post.title}}
+          </h2>
+
+          <button routerLink='{{post.id}}' class="btn read card_btn">More details</button>
+          <span *ngIf="user"   (click)="delete(post.id)"><i  id="trash" class="fas fa-trash"></i></span>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+
+</div>
+

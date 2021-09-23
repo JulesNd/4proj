@@ -1,0 +1,52 @@
+.card {
+  width: 50%;
+  margin-left: 30%;
+  height: 80%;
+
+}
+
+input{
+  height: 60%;
+  font-size: 3vh;
+}
+label{
+  font-size: 2vh;
+}
+
+
+.card-body {
+  height: 100%;
+
+}
+
+.jumbotron{
+  height: 808px;
+}
+
+
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited  {
+  background-color: rgba(255, 69, 0, 0.89);
+  border-color: rgba(255, 69, 0, 0.89);
+}
+.btn-primary{
+  border-color: rgba(255, 69, 0, 0.89);
+}
+.btn-primary:hover {
+  background-color: rgba(255, 69, 0, 0.89);
+}
+
+#mybutton {
+  margin-left: 40%;
+  margin-top: 2%;
+  height: 50px;
+  width: 150px;
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+  #mybutton {
+    margin-left: 25%;
+    margin-top: 2%;
+    width: 50%;
+    height: auto;
+  }
+}

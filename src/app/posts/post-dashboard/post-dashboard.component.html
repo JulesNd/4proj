@@ -1,3 +1,24 @@
-<p>
-  post-dashboard works!
-</p>
+<div id="Articledash" >
+  <div class="jumbotron" ><h3> School informations</h3> </div>
+
+  <div class="form-group">
+    <label >School name</label>
+    <input class="form-control"  [(ngModel)]="title">
+  </div>
+  <div class="form-group">
+    <label >Google drive picture ID</label>
+    <input class="form-control"  [(ngModel)]="image">
+  </div>
+
+
+  <div class="form-group" >
+    <label for="exampleFormControlTextarea1">Additional informations</label>
+    <textarea  class="form-control" id="exampleFormControlTextarea1" placeholder="Content" [(ngModel)]="content"></textarea>
+  </div>
+  <div class="form-group">
+    <label >Date</label> <br>
+    <input  type="date"  [(ngModel)]="published">
+  </div>
+  <button type="submit" class="btn btn-dark" (click)="createPost(); alert()">Submit</button>
+
+</div>

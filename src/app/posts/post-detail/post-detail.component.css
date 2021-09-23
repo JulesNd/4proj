@@ -1,0 +1,275 @@
+.jumbotron{
+  background-color: #000000;
+}
+
+.info {
+  padding: 5%;
+}
+.text{
+  color: white;
+  text-align: center;
+  font-size: 6vh;
+  font-weight: 400;
+  background-color: black;
+  padding: 2%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+img{
+  width: 10%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+
+@media screen and (max-width: 767px){
+  :root {
+    font-size: 12px;
+  }
+}
+
+h4 {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  text-align: center;
+  font-size: 3vh;
+}
+
+.text{
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 4vh;
+  font-weight: 400;
+}
+
+
+
+table {
+  width: 750px;
+
+  border-collapse: collapse;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  margin-top: -1%;
+  z-index: -1;
+
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+  background: #eee;
+}
+
+th {
+  background: #8ccae5;
+  color: white;
+  font-weight: bold;
+}
+
+td, th {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  font-size: 18px;
+}
+
+/*
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+  table {
+    width: 100%;
+  }
+
+  /* Force table to not be like tables anymore */
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr { border: 1px solid #ccc; }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    /* Label the data */
+    content: attr(data-column);
+
+    color: #000;
+    font-weight: bold;
+  }
+
+}
+.description {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  text-align: center;
+  margin-bottom: 5%;
+}
+.txt{
+  width: 80%;
+  font-size: 3vh;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  color: black;
+}
+
+
+
+.glyphicon {
+  font-size: 4vh;
+}
+.glyphicon:hover {
+  color: green;
+  cursor: pointer;
+}
+
+.update {
+  margin: 5%;
+}
+
+.editbox {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+#editjumb {
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.sauvegarder {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  background-color: black;
+  color: #FFFFFF;
+}
+
+.sauvegarder:hover{
+  background-color: #2c2c2c;
+}
+
+
+
+
+
+h2 {
+  position: absolute;
+  top: 200px;
+  left: 30px;
+  width: 100%;
+}
+h2 span {
+  color: white;
+  font: bold 24px/45px Helvetica, Sans-Serif;
+  letter-spacing: -1px;
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+}
+h2 span.spacer {
+  padding:0 5px;
+}
+
+h1{
+  position: absolute;
+  bottom: 30px;
+  left: 25%;
+  width: 100%;
+
+}
+
+h1 span {
+  color: white;
+  font-size: 3vh;
+  letter-spacing: -1px;
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+}
+h1 span.spacer2 {
+  padding:0 1px ;
+}
+
+strong {
+  padding: 2%;
+}
+
+.glyphicon {
+  padding: 1%;
+}
+.apartir {
+  font-size: 2vh;
+}
+
+
+
+
+
+img {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.12), 0 4px 5px rgba(0,0,0,0.24);
+
+}
+@media (min-width:320px) and (max-width: 799px) {
+  .text{
+    color: white;
+    text-align: center;
+    font-size: 5vh;
+    font-weight: 400;
+    background-color: black;
+    padding: 2%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  img{
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+  }
+
+}

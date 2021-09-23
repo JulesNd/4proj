@@ -1,3 +1,41 @@
-<p>
-  post-detail works!
-</p>
+<div  *ngIf="post">
+
+  <div class="text">{{post.title}}</div>
+  <div class="update" *ngIf="user">
+    <span   (click)="toggleShow();scroll(target) " class="glyphicon glyphicon-pencil" > <i class="fas fa-pencil-alt"></i> </span>
+  </div>
+  <img src="https://drive.google.com/uc?export=view&id={{post.image}}">
+  <div class="info">
+    <h4>{{post.content}}</h4>
+    <h4 >Under program since :  {{post.published}}</h4>
+  </div>
+</div>
+
+<div #target >
+  <div   class="editbox" *ngIf="Show" >
+    <div id="Articledash" >
+
+      <div  class="jumbotron" ><h3 id="editjumb" > Made a mistake ? No problem ;)</h3> </div>
+      <div class="form-group">
+        <label >Title</label>
+        <input class="form-control"  [(ngModel)]="post.title">
+      </div>
+      <div class="form-group">
+        <label >Image ID</label>
+        <input class="form-control"  [(ngModel)]="post.image">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Content</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Content" [(ngModel)]="post.content"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label >Date</label>
+        <input class="form-control" type="date"  [(ngModel)]="post.published">
+        <button  type="submit" id="submitted" class="btn btn-dark sauvegarder" (click)="updatePost();alert()">Update  </button>
+
+      </div>
+
+    </div>
+  </div>
+</div>

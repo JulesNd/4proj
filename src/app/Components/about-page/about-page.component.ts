@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutPageComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+    const glowInTexts = document.querySelectorAll('.glowIn');
+    glowInTexts.forEach(glowInText => {
+      const letters = glowInText.textContent.split('');
+      glowInText.textContent = '';
+      letters.forEach((letter, i) => {
+        const span = document.createElement('span');
+        span.textContent = letter;
+        span.style.animationDelay = `${i * 0.05}s`;
+        glowInText.append(span);
+      });
+    });
+
   }
 
 }

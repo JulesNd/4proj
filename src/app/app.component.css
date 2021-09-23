@@ -1,0 +1,11 @@
+html body{
+
+  scroll-behavior: smooth;
+}
+
+@media (min-width:320px) and (max-width: 799px) {
+  #a {
+    margin-top: 2%;
+  }
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+}

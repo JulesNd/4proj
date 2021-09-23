@@ -41,8 +41,9 @@
       "trace"
     ],
     "no-empty": false,
+
     "no-inferrable-types": [
-      true,
+      false,
       "ignore-params"
     ],
     "no-non-null-assertion": true,
