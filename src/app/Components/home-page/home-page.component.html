@@ -1,10 +1,16 @@
-<div class="qr">
+<div *ngIf="!user">
+  <div class="message">
+    This page is restricted. Please log in to continue.
+  </div>
+</div>
+<div *ngIf="user">
+<div class="qr" >
 
   <a target="__blank" href="https://qrcode.tec-it.com/en/Url" class="btn-dark" >
 
     Generate a QR CODE
   </a>
-  
+
 
 
 </div>
@@ -113,14 +119,5 @@
 
 
 </script>
-
-
-<div>
-
-  <a target="__blank" href="https://qrcode.tec-it.com/en/Url" class="btn-dark" >
-
-    Generate a QR CODE
-  </a>
-
 
 </div>
