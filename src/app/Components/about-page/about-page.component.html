@@ -1,7 +1,15 @@
-<div class="text">Locations</div>
-<div class="about">
 
-<div class="title">
+
+
+<div class="text">Locations</div>
+
+<div *ngIf="!user">
+  <div class="message">
+    This page is restricted. Please log in to continue.
+  </div>
+<div class="about" *ngIf="user">
+
+<div class="title" >
 You can find the vegetalized centers on the map below
 </div>
   <div class="content">
@@ -10,4 +18,5 @@ You can find the vegetalized centers on the map below
     <div class="enjoy">
 Click on the icons for more informations    </div>
   </div>
+</div>
 </div>

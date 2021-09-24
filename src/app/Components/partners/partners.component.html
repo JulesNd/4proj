@@ -1,7 +1,12 @@
 <div class="text">Partners</div>
-<div class="about">
+<div *ngIf="!user">
+  <div class="message">
+    This page is restricted. Please log in to continue.
+  </div>
+<div class="about" *ngIf="user">
 
-  <div class="title">
+
+  <div class="title" >
     Get free gifts from our partners
   </div>
   <div class="content">
