@@ -184,7 +184,9 @@ h2{
   background: linear-gradient(to bottom left, #000000 40%, #010101 100%);
   box-shadow: 0 20px 40px -35px rgb(0, 0, 0);
 }
-
+h4 {
+  color: white;
+}
 .card_title {
   color: #ffffff;
   font-size: 1.1rem;

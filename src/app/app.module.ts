@@ -28,6 +28,7 @@ import { ProjectListComponent } from './Components/Projects/project-list/project
 import {ProjectDetailsComponent} from './Components/Projects/project-details/project-details.component';
 import {ProjectDashboardComponent} from './Components/Projects/project-dashboard/project-dashboard.component';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
+import { PartnersComponent } from './Components/partners/partners.component';
 
 const routes: Routes = [
 
@@ -51,7 +52,8 @@ const routes: Routes = [
     SignupComponent,
     ProjectListComponent,
     ProjectDetailsComponent,
-    ProjectDashboardComponent
+    ProjectDashboardComponent,
+    PartnersComponent
   ],
   imports: [
     BrowserModule,

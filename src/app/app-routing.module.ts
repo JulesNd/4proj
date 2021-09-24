@@ -7,15 +7,17 @@ import {ProjectsPageComponent} from './Components/projects-page/projects-page.co
 import {AdminComponent} from './Components/admin/admin.component';
 import {PostingComponent} from './Components/posting/posting.component';
 import {PostDashboardComponent} from './posts/post-dashboard/post-dashboard.component';
+import {PartnersComponent} from './Components/partners/partners.component';
 
 const routes: Routes = [
-  {path: 'Home', component: HomePageComponent},
+  {path: 'Scanner', component: HomePageComponent},
   {path: 'Members', component: ProjectsPageComponent},
   {path: 'Contact', component: ContactPageComponent},
   {path: 'About', component: AboutPageComponent},
   {path: 'Admin', component: AdminComponent},
   {path: 'Posting', component: PostingComponent},
-  {path: 'dashboard', component: PostDashboardComponent}
+  {path: 'dashboard', component: PostDashboardComponent},
+  {path: 'partners', component: PartnersComponent}
 ];
 
 @NgModule({

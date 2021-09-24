@@ -17,7 +17,10 @@
           <h2 routerLink='{{post.id}}'>
             {{post.title}}
           </h2>
+          <h4>
+            Representative : <br> {{post.content}}
 
+          </h4>
           <button routerLink='{{post.id}}' class="btn read card_btn">More details</button>
           <span *ngIf="user"   (click)="delete(post.id)"><i  id="trash" class="fas fa-trash"></i></span>
         </div>
