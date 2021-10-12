@@ -4,12 +4,12 @@
   </div>
 </div>
 <div class="main" *ngIf="user">
-  <a routerLink="/Member"><i class="fas fa-filter"></i>Filter Role : member</a> <br>
-  <a routerLink="/Volunteer"><i class="fas fa-filter"></i>Filter Role: volunteer</a>
+  <a routerLink="/Members"><i class="fas fa-users"></i>Go back to all members</a>
+
 
   <ul class="cards" >
     <li class="cards_item" *ngFor="let project of projects | async">
-      <div class="card">
+      <div class="card" *ngIf="project.content === 'Member'">
 
 
         <img   src="https://drive.google.com/uc?export=view&id={{project.image}}">
@@ -17,8 +17,8 @@
 
         <div class="card_content">
           <h2 class="infos" routerLink='{{project.id}}'>
-          Full name : {{project.title}} <br>
-           Status :  {{project.content}}<br>
+            Full name : {{project.title}} <br>
+            Status :  {{project.content}}<br>
             Subscribed until : {{project.published}} <br>
 
           </h2>
